@@ -1,0 +1,12 @@
+.post_style
+{
+   padding:1em;
+   border:1px solid red;
+   width: 70%;
+   height:auto;
+}
+
+.post_photo
+{
+    width:100%;
+}
