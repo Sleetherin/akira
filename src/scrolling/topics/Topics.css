@@ -1,0 +1,37 @@
+.scrolling_topics_style
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin:4%;
+    box-shadow: 5px 5px 15px aquamarine;
+}
+
+@media screen and (min-width: 801px)
+{
+    .scrolling_topics_style
+    {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .scrolling_topics_style
+    {
+        width: 100%;
+    }
+}
+
+.topics_title_style
+{
+    font-weight: 700;
+    margin-bottom: 3em;
+}
+
+.topics_style
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

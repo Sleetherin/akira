@@ -6,3 +6,19 @@
   flex-direction: column;
 }
 
+.feed_style
+{
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width:700px)
+{
+   .feed_style
+   {
+     display: flex;
+     flex-direction:column;
+     width: 100%;
+   }
+}
+

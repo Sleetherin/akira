@@ -1,8 +1,18 @@
 .menu_style
 {
-    background-color: blue;
     display: flex;
     justify-content: space-around;
+    justify-items: center;
+    box-shadow: 2px 2px 15px palevioletred;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.searchbar_style
+{
+    border:1px solid orange;
+    display: flex;
+    margin: 1em;
 }
 
 

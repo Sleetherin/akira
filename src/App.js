@@ -1,6 +1,8 @@
 import './App.css';
-import Post from './components/post/Post';
+
 import SearchBar from './components/searchbar/SearchBar';
+import Posts from './scrolling/posts/Posts';
+import Topics from './scrolling/topics/Topics';
 
 
 
@@ -9,7 +11,10 @@ function App() {
   return (
     <div className="app">
       <SearchBar/>
-      <Post/>
+      <div className="feed_style">
+        <Posts/>
+        <Topics/>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.scrolling_posts_style
+{
+    width:70%;
+}
+
+@media screen and (max-width: 600px)
+{
+    .scrolling_posts_style
+    {
+        width:100%;
+        right:0;
+    }
+    
+}
