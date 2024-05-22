@@ -3,7 +3,7 @@
    display: flex;
    margin:5%;
    padding:5%;
-   box-shadow: 1px 1px 12px palevioletred;
+   box-shadow: 10px 0px 32px #FA3299;
 }
 
 .rating
@@ -20,8 +20,10 @@
 
 .rate:hover
 {
-    color:palevioletred;
+    color:#8DFA4D
 }
+
+
 
 .message_photo_style
 {
@@ -33,7 +35,6 @@
 .post_photo
 {
    width:100%;
-
 }
 
 .message

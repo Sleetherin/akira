@@ -3,16 +3,21 @@
     display: flex;
     justify-content: space-around;
     justify-items: center;
-    box-shadow: 2px 2px 15px palevioletred;
+    box-shadow: 2px 2px 32px #FA3299;
     margin-bottom: 1em;
     font-size: 1.5em;
 }
 
 .searchbar_style
 {
-    border:1px solid orange;
+    border:1px solid #7E4DFA;
     display: flex;
     margin: 1em;
 }
 
+.name_of_app
+{
+    color:#8DFA4D;
+    font-size: 1.2em;
+}
 

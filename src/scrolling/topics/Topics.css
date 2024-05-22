@@ -4,23 +4,27 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin:4%;
-    box-shadow: 5px 5px 15px aquamarine;
+    box-shadow: -6px -6px 18px #FA3299;
+    width:30%;
 }
 
-@media screen and (min-width: 801px)
+@media screen and (max-width: 700px) 
 {
     .scrolling_topics_style
     {
-        width: 25%;
+        width: 90%;
+
     }
 }
 
-@media screen and (max-width: 800px)
+@media screen and (min-width: 700px) and (max-width: 900px)
 {
     .scrolling_topics_style
     {
-        width: 100%;
+        box-shadow: none;
+        width:10%;
     }
+
 }
 
 .topics_title_style

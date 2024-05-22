@@ -1,14 +1,37 @@
-.scrolling_posts_style
+
+@media screen and (min-width: 2000px) 
 {
-    width:70%;
+    .scrolling_posts_style
+    {
+        width:80%;
+        background-color: black;
+    }
+    
 }
 
-@media screen and (max-width: 600px)
+@media screen and (min-width: 800px) and (max-width: 2000px)
+{
+    .scrolling_posts_style
+    {
+        width:90%;
+    }
+    
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px)
 {
     .scrolling_posts_style
     {
         width:100%;
-        right:0;
+    }
+    
+}
+
+@media screen and (max-width: 700px)
+{
+    .scrolling_posts_style
+    {
+        width:100%;
     }
     
 }
