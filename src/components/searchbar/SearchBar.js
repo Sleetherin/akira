@@ -1,7 +1,7 @@
 import './SearchBar.css';
 
 import React, { Component } from 'react';
-import { GiBastet } from "react-icons/gi";
+import { GiBastet, GiPaw } from "react-icons/gi";
 
 export class SearchBar extends Component {
   render() {
@@ -10,7 +10,7 @@ export class SearchBar extends Component {
             <p className="name_of_app">BASTET<GiBastet /></p>
         <div className="searchbar_style">
             <input type="text" placeholder="Search a topic"/>
-            <button width="100">Search</button>
+            <button className="search_button_style"><GiPaw/></button>
         </div>
        </div>
     )

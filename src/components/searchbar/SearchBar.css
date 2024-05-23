@@ -10,9 +10,21 @@
 
 .searchbar_style
 {
-    border:1px solid #7E4DFA;
     display: flex;
     margin: 1em;
+}
+
+.search_button_style
+{
+    margin-left:2em;
+    background:none;
+    color:#8DFA4D;
+    border: none;
+}
+
+.search_button_style:hover
+{
+    color:#FA3299;
 }
 
 .name_of_app

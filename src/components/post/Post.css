@@ -3,7 +3,8 @@
    display: flex;
    margin:5%;
    padding:5%;
-   box-shadow: 10px 0px 32px #FA3299;
+   box-shadow: 12px 0px 32px #FA3299;
+   border-radius: 1em;
 }
 
 .rating
