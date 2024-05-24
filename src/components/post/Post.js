@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { ImHappy,ImSmile, ImBaffled, ImAngry} from "react-icons/im";
 
 
-import testPhoto from './fox.jpg';
+import testPhoto from './pink.jpg';
 
 export class Post extends Component {
   render() {
