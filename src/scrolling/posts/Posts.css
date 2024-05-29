@@ -1,22 +1,18 @@
-
-
-
-
-@media screen and (min-width: 2000px) 
+.scrolling_posts_style
 {
-    .scrolling_posts_style
-    {
-        width:80%;
-        background-color: black;
-    }
-    
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-@media screen and (min-width: 800px) and (max-width: 2000px)
+
+
+@media screen and (min-width: 800px) 
 {
     .scrolling_posts_style
     {
-        width:90%;
+        width:70%;
+
     }
     
 }
@@ -25,7 +21,7 @@
 {
     .scrolling_posts_style
     {
-        width:100%;
+        width:80%;
     }
     
 }
@@ -35,6 +31,7 @@
     .scrolling_posts_style
     {
         width:100%;
+        flex-wrap: wrap;
     }
     
 }

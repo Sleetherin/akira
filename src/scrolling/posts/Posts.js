@@ -1,24 +1,53 @@
+
 import Post from "../../components/post/Post";
 import "./Posts.css";
 
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { fetchPosts } from "../../store/postsSlice";
 
-export class Posts extends Component {
-  render() {
-    return (
+const PostsFunction = ({subreddit}) => {
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.posts.posts);
+  const status = useSelector((state) => state.posts.status);
+  const error = useSelector((state) => state.posts.error);
+
+  useEffect(() => {
+    if(status === 'idle')
+      {
+        dispatch(fetchPosts(subreddit));
+      }
+  }, [status, dispatch, subreddit]);
+
+
+    let content;
+
+    if(status === 'loading'){content = (<div>Loading ...</div>); }
+    else if(status === 'succeeded')
+    {
+      content = (
+        <div>
+          {posts.map((post) => (
+            <div key={post.id}>
+              <Post title={post.title} text={post.selftext}/>
+            </div>
+            ))}
+        </div>
+      )
+    }
+    else if(status === 'failed')
+    {
+      content = (<div>{error}</div>);
+    }
+
+    return(
       <div className="scrolling_posts_style">
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+        {content}
       </div>
     )
-  }
 }
 
-export default Posts;
+export default PostsFunction;
+
+
+//className="scrolling_posts_style"
