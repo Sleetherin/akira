@@ -35,7 +35,7 @@ export class Post extends Component {
         }
         {
           this.props.video && this.props.video.reddit_video && (
-            <video className='post_video' controls>
+            <video className='post_photo' controls>
               <source src={this.props.video.reddit_video.fallback_url} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
