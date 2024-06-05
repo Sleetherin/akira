@@ -35,12 +35,19 @@
 
 .post_photo
 {
-   width:100%;
+   width: 100%;
+   height:auto;
+   max-width: 100%;
+   object-fit: cover;
 }
 
 .message
 {
     text-align: left;
-    text-overflow:;
+}
+
+.username
+{
+    text-transform: uppercase;
 }
 

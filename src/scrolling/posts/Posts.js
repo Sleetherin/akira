@@ -1,4 +1,3 @@
-
 import Post from "../../components/post/Post";
 import "./Posts.css";
 
@@ -29,7 +28,7 @@ const PostsFunction = ({subreddit}) => {
         <div>
           {posts.map((post) => (
             <div key={post.id}>
-              <Post title={post.title} text={post.selftext}/>
+              <Post username={post.author} title={post.title} text={post.selftext} photo={post.url} video={post.media}/>
             </div>
             ))}
         </div>

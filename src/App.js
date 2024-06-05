@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 
 import SearchBar from './components/searchbar/SearchBar';
-import Posts from './scrolling/posts/posts';
-import Topics from './scrolling/topics/Topics';
+import PostsFunction from './scrolling/posts/posts';
+import Topics from './scrolling/topics/topics';
 
 
 
@@ -19,7 +19,7 @@ function App() {
       <Provider store={store}>
         <SearchBar/>
         <div className="feed_style">
-          <Posts subreddit="reactjs"/>
+          <PostsFunction subreddit="popular"/>
           <Topics/>
         </div>     
       </Provider>
@@ -28,3 +28,6 @@ function App() {
 }
 
 export default App;
+/*
+<PostsFunction subreddit="reactjs"/>
+*/

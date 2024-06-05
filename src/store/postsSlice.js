@@ -41,4 +41,3 @@ const postsSlice = createSlice({
 
 //export {fetchPosts};
 export default postsSlice.reducer;
-

@@ -1,37 +1,40 @@
 import './Topics.css'
 
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { fetchTopics } from "../../store/topicsSlice";
+import Topic from '../../components/topic/Topic';
 
-export class Topics extends Component {
-  render() {
-    return (
-      <div className="scrolling_topics_style">
-        <p className="topics_title_style">TOPICS</p>
-        <div className="topics_style">
-            <p>Lunaria</p>
-            <p>Osiris</p>
-            <p>Hannah</p>
-            <p>Alexander</p>
-            <p>Bella</p>
-            <p>Vincent</p>
-            <p>Bastet</p>
-            <p>Adora</p>
-            <p>Rebekah</p>
-            <p>Giulia</p>
-            <p>Lunaria</p>
-            <p>Osiris</p>
-            <p>Hannah</p>
-            <p>Alexander</p>
-            <p>Bella</p>
-            <p>Vincent</p>
-            <p>Bastet</p>
-            <p>Adora</p>
-            <p>Rebekah</p>
-            <p>Giulia</p>
-        </div>
+export const Topics = () => {
+  
+  const dispatch = useDispatch();
+  const { topics, status, error } = useSelector((state) => state.topics);
+  
+  useEffect(() => {
+    dispatch(fetchTopics())
+  },[dispatch]);
+    
+  return (
+    <div className="scrolling_topics_style">
+      <p className="topics_title_style">TOPICS</p>
+      <div className="topics_style">
+          {status === 'loading' && <p>Loading...</p>} 
+          {status === 'failed' && <p>Error: {error}</p>}
+          {status === 'succeeded' &&
+            topics.map((topic) => (
+              <Topic key={topic.id} topic={topic}/>
+            ))}
       </div>
+    </div>
     )
-  }
+  
 }
 
 export default Topics;
+
+/*<div className="scrolling_topics_style">
+        <p className="topics_title_style">TOPICS</p>
+        <div className="topics_style">
+  <Topic topic={subTopics.display_name_prefixed}/>       
+        
+*/

@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { ImHappy,ImSmile, ImBaffled, ImAngry} from "react-icons/im";
 
 
-import testPhoto from './pink.jpg';
 
 export class Post extends Component {
 
@@ -19,9 +18,29 @@ export class Post extends Component {
             <ImAngry className='rate'/>
         </div>
         <div className="message_photo_style">
-          <p className="username">{this.props.title}</p>
+          <p className="username"><strong>{this.props.username}</strong>:  {this.props.title}</p>
           <p className="message">{this.props.text}</p>
-          <img className='post_photo' src={testPhoto} alt="a test"/>
+          {
+          this.props.photo && this.props.photo !== 'self' && this.props.photo !== 'default' && (() => {
+            const extension = this.props.photo.split('.').pop().toLowerCase();
+
+            if (['jpg', 'jpeg', 'png', 'bmp', 'webp'].includes(extension)) {
+              return <img className='post_photo' src={this.props.photo} alt="photo" />;
+            } else if (extension === 'gif') {
+              return <img className='post_photo' src={this.props.photo} alt="gif" />;
+            } else {
+              return null;
+            }
+          })()
+        }
+        {
+          this.props.video && this.props.video.reddit_video && (
+            <video className='post_video' controls>
+              <source src={this.props.video.reddit_video.fallback_url} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )
+        }
         </div>
       </div>
     )
@@ -29,3 +48,4 @@ export class Post extends Component {
 }
 
 export default Post;
+
