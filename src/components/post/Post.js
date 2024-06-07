@@ -1,18 +1,27 @@
 import './Post.css';
 
-import React, { Component } from 'react';
+import React, {  Component } from 'react';
 import { ImHappy,ImSmile, ImBaffled, ImAngry} from "react-icons/im";
 
 
 
 export class Post extends Component {
 
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      rate:0,
+    }
+  }
 
   render() {
+
+
     return (
       <div className="post_style">
         <div className='rating'>
-            <ImHappy className='rate'/>
+           <ImHappy className='rate'/>
             <ImSmile className='rate'/>
             <ImBaffled className='rate'/>
             <ImAngry className='rate'/>
@@ -42,6 +51,7 @@ export class Post extends Component {
           )
         }
         </div>
+        <p className="post_rates_style">{this.state.rate} purrs</p>
       </div>
     )
   }

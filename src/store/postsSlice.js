@@ -9,12 +9,16 @@ export const fetchPosts = createAsyncThunk('posts/fetchPosts',
     }
 );
 
+
+
+
 //initial state for the slice
 const initialState = {
     posts:[],
     status:'idle',
     error:null,
 }
+
 
 
 
@@ -34,7 +38,7 @@ const postsSlice = createSlice({
         })
         .addCase(fetchPosts.rejected, (state,action) => {
             state.status = 'failed';
-            state.error = action.error.message;
+            state.error = "HISS!! EITHER YOU MISSED A STEP OR THAT TOPIC DOESN'T EXIST!";
        })
     }
 });

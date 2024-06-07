@@ -28,7 +28,12 @@ const PostsFunction = ({subreddit}) => {
         <div>
           {posts.map((post) => (
             <div key={post.id}>
-              <Post username={post.author} title={post.title} text={post.selftext} photo={post.url} video={post.media}/>
+              <Post 
+              username={post.author} 
+              title={post.title} 
+              text={post.selftext} 
+              photo={post.url} 
+              video={post.media}/>
             </div>
             ))}
         </div>

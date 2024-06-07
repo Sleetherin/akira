@@ -10,16 +10,13 @@ import PostsFunction from './scrolling/posts/posts';
 import Topics from './scrolling/topics/topics';
 
 
-
-
-
 function App() {
   return (
     <div className="app">
       <Provider store={store}>
-        <SearchBar/>
+        <SearchBar />
         <div className="feed_style">
-          <PostsFunction subreddit="popular"/>
+          <PostsFunction subreddit="cats"/>
           <Topics/>
         </div>     
       </Provider>
