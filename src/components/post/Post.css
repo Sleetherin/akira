@@ -14,8 +14,11 @@
     justify-content: space-around;
     width:20%;
     margin-right: 5%;
+}
+
+.rate{
     font-weight: 100;
-    font-size: 2em;
+    font-size: 1.4em;
     color:#FA3299;
 }
 
@@ -23,8 +26,6 @@
 {
     color:#8DFA4D
 }
-
-
 
 .message_photo_style
 {

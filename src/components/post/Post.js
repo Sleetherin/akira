@@ -13,6 +13,38 @@ export class Post extends Component {
     this.state = {
       rate:0,
     }
+    this.veryHappy = this.veryHappy.bind(this);
+    this.justHappy = this.justHappy.bind(this);
+    this.notImpressed = this.notImpressed.bind(this);
+    this.deeplyDislike = this.deeplyDislike.bind(this);
+  }
+
+  veryHappy()
+  {
+    this.setState((prevState) => ({
+      rate:prevState.rate + 2
+    }));
+  }
+
+  justHappy()
+  {
+    this.setState((prevState) => ({
+      rate:prevState.rate + 1
+    }));
+  }
+
+  notImpressed()
+  {
+    this.setState((prevState) => ({
+      rate:prevState.rate - 1
+    }));
+  }
+
+  deeplyDislike()
+  {
+    this.setState((prevState) => ({
+      rate:prevState.rate - 2
+    }));
   }
 
   render() {
@@ -21,10 +53,10 @@ export class Post extends Component {
     return (
       <div className="post_style">
         <div className='rating'>
-           <ImHappy className='rate'/>
-            <ImSmile className='rate'/>
-            <ImBaffled className='rate'/>
-            <ImAngry className='rate'/>
+           <ImHappy onClick={this.veryHappy} className='rate'/>
+            <ImSmile onClick={this.justHappy} className='rate'/>
+            <ImBaffled onClick={this.notImpressed} className='rate'/>
+            <ImAngry onClick={this.deeplyDislike} className='rate'/>
         </div>
         <div className="message_photo_style">
           <p className="username"><strong>{this.props.username}</strong>:  {this.props.title}</p>
