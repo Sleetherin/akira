@@ -21,9 +21,12 @@ export const Topics = () => {
           {status === 'loading' && <p>Loading...</p>} 
           {status === 'failed' && <p>Error: {error}</p>}
           {status === 'succeeded' &&
-            topics.map((topic) => (
-              <Topic key={topic.id} topic={topic}/>
-            ))}
+            topics.map((topic) => {
+              let t = (<Topic key={topic.id} topic={topic} />);
+
+              return t;}
+            )
+          }
       </div>
     </div>
     )
@@ -32,9 +35,4 @@ export const Topics = () => {
 
 export default Topics;
 
-/*<div className="scrolling_topics_style">
-        <p className="topics_title_style">TOPICS</p>
-        <div className="topics_style">
-  <Topic topic={subTopics.display_name_prefixed}/>       
-        
-*/
+

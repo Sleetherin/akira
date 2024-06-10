@@ -1,48 +1,29 @@
 import "./Topic.css";
 
-import React, { Component } from 'react';
-
-
-export class Topic extends Component {
-
-  render() {
-    const { display_name} = this.props.topic;
-
-
-    return (
-      <div className="topic_style">
-         <p>{display_name}</p>
-      </div>
-    )
-  }
-}
-
-export default Topic;
-/*
-import "./Topic.css";
-
-import React, { useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from "react-redux";
+import { fetchPosts } from "../../store/postsSlice";
 
-export const Topic = ({topic}) => {
 
-  //const { display_name} = this.props.topic;
+export const Topic = (props) => {
+  
   const dispatch = useDispatch();
+  const { display_name} = props.topic;
 
-  const topicClawed = useRef(null);
-
-  const changePosts = () => {
-    topicClawed.current.style.color="yellow";
+  const handleTopicClick = (e) => {
+    console.log(`topic: ${display_name}!`);
+    dispatch(fetchPosts(display_name));
   }
+  
 
   return (
     <div className="topic_style">
-      <p ref={changePosts}>{topic}</p>
+      <p onClick={handleTopicClick} id="mostPopularTopic">{display_name}</p>
     </div>
   )
   
 }
 
-export default Topic
-//  <p ref={changePosts}>{display_name}</p>*/
+export default Topic;
+
 

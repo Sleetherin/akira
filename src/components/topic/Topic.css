@@ -3,3 +3,7 @@
    color:#8DFA4D;
    font-weight: bold;
 }
+
+#mostPopularTopic{
+   cursor:pointer;
+}
