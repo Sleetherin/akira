@@ -11,7 +11,6 @@ export const Topic = (props) => {
   const { display_name} = props.topic;
 
   const handleTopicClick = (e) => {
-    console.log(`topic: ${display_name}!`);
     dispatch(fetchPosts(display_name));
   }
   

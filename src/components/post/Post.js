@@ -1,7 +1,10 @@
 import './Post.css';
 
 import React, {  Component } from 'react';
+import Popup from 'reactjs-popup';
 import { ImHappy,ImSmile, ImBaffled, ImAngry} from "react-icons/im";
+import { GiCat } from "react-icons/gi";
+import { Comments } from "../../scrolling/comments/comments";
 
 
 
@@ -84,6 +87,15 @@ export class Post extends Component {
         }
         </div>
         <p className="post_rates_style">{this.state.rate} purrs</p>
+        <Popup 
+        className="popup_comments_style"        
+        trigger={<button className="comments_button_style"><GiCat/></button>}
+        position="right center"
+        >
+           <div className="comments_style">
+              <Comments id={this.props.id} subreddit={this.props.subreddit}/>
+           </div>
+        </Popup>
       </div>
     )
   }

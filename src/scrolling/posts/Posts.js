@@ -28,7 +28,9 @@ const PostsFunction = ({subreddit}) => {
         <div>
           {posts.map((post) => (
             <div key={post.id}>
-              <Post 
+              <Post
+              subreddit={subreddit}
+              id={post.id}
               username={post.author} 
               title={post.title} 
               text={post.selftext} 

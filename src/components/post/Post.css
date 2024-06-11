@@ -47,6 +47,7 @@
     color:#FA3299;
     font-weight: bold;
     margin-left: 30px;
+    margin-right:15px;
 }
 
 .message
@@ -58,4 +59,26 @@
 {
     text-transform: uppercase;
 }
+
+.comments_style
+{
+    background-color: #FA3299;
+    color:black;
+}
+
+.comments_button_style
+{
+    background-color: #8DFA4D;
+}
+
+.comments_button_style:hover
+{
+    background-color: #FA3299
+}
+
+.comments_button_style:active
+{
+    background-color: #FA3299
+}
+
 
