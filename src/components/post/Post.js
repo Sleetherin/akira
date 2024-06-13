@@ -92,9 +92,9 @@ export class Post extends Component {
         trigger={<button className="comments_button_style"><GiCat/></button>}
         position="right center"
         >
-           <div className="comments_style">
+            <div className="comments_style">
               <Comments id={this.props.id} subreddit={this.props.subreddit}/>
-           </div>
+            </div>
         </Popup>
       </div>
     )

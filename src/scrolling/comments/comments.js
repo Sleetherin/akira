@@ -1,10 +1,11 @@
-import "./Comments.css";
+
 
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 
 import { fetchComments } from "../../store/commentsSlice";
 import { Comment } from "../../components/comment/Comment";
+
 
 export const Comments = (props) => 
 {
@@ -19,7 +20,6 @@ export const Comments = (props) =>
         if(status === "idle")
         {
            dispatch(fetchComments({subreddit,postId}));
-           console.log(`${subreddit} and ${postId}`);
         }
     },[status,dispatch,subreddit,postId])
 
@@ -38,12 +38,12 @@ export const Comments = (props) =>
                            user={comment.author}
                            message={comment.body}
                         />
+                        
                     </div>
                 ))}
             </div>
         )
 
-        console.log(comments);
    
     }
     else if(status === "failed")
@@ -52,7 +52,15 @@ export const Comments = (props) =>
     }
 
     return(
-    <div className="comments_style">
+    <div 
+    style={{backgroundColor:"#FA3299",
+        marginLeft:"0px", 
+        marginRight:"15px",
+        overflowY:"scroll", 
+        height:"300px",
+        paddingLeft:"10px",
+        paddingRight:"10px",
+    }}>
        {content_comments}
     </div>
     )

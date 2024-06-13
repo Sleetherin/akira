@@ -60,20 +60,30 @@
     text-transform: uppercase;
 }
 
-.comments_style
+/*commenting part*/
+
+.comments_style 
 {
-    background-color: #FA3299;
-    color:black;
+    display: inline-block;
+    border:1px solid black;
+    right:10px;
+    max-width: 500px;
+    overflow-x:auto;
 }
+
 
 .comments_button_style
 {
-    background-color: #8DFA4D;
+    color: #8DFA4D;
+    background: none;
 }
+
+
 
 .comments_button_style:hover
 {
-    background-color: #FA3299
+    background-color: #FA3299;
+    color:black;
 }
 
 .comments_button_style:active
