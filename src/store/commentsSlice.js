@@ -7,7 +7,7 @@ export const fetchComments = createAsyncThunk('comments/fetchComments',
         const { rejectWithValue} =thunkAPI;
         try
         {
-            const response = await axios.get(`https://www.reddit.com/r/${subreddit}/comments/${postId}.json`);
+            const response = await axios.get(`https://www.reddit.com/r/${subreddit}/comments/${postId}.json?raw_json=1`);
     
             if(response.data && response.data.length > 1)
             {
